@@ -21,10 +21,11 @@ namespace Algorithm.Sorted
                 {
                     if (items[i] > items[j])
                     {
-                        Swap(ref items[i], ref items[j]);
+                        Helper.Swap(ref items[i], ref items[j]);
                     }
                     numberSteps++;
                 }
+                Console.WriteLine(string.Join(",", items));
             }
             return numberSteps;
         }
@@ -42,11 +43,12 @@ namespace Algorithm.Sorted
                 {
                     if(items[i] > items[j])
                     {
-                        Swap(ref items[i], ref items[j]);
+                        Helper.Swap(ref items[i], ref items[j]);
                         swapped = true;
                     }
                     numberSteps++;
                 }
+                Console.WriteLine(string.Join(",", items));
                 if (swapped == false) break;
             }
             return numberSteps;

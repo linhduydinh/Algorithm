@@ -40,14 +40,20 @@ namespace Algorithm
 
         public static void Main(string[] args)
         {
-            var items = new int[] { 1,2,3,4,5 };
+            var items = new int[] { 3, 1, 6, 4, 5, 2 };
 
 
-            var bubbleSort = new BubbleSort();
-            var count = bubbleSort.OptimizedSort(items);
+            var insertionSort = new InsertionSort();
+            var count = insertionSort.Sort(items);
 
             Console.WriteLine(string.Join(",", items));
             Console.WriteLine(count);
+
+            //var bubbleSort = new BubbleSort();
+            //var count = bubbleSort.OptimizedSort(items);
+
+            //Console.WriteLine(string.Join(",", items));
+            //Console.WriteLine(count);
 
 
             //var missing = new HashSet<int>();
