@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Fibonacci\Fibonacci.cs" />
     <Compile Include="Queue\CustomQueue.cs" />
+    <Compile Include="Sorted\BubbleSort.cs" />
     <Compile Include="Stack\MyStack.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

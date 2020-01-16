@@ -4,6 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Algorithm.Sorted;
 
 namespace Algorithm
 {
@@ -39,22 +40,43 @@ namespace Algorithm
 
         public static void Main(string[] args)
         {
-            var a = new int[] { 2, 3, 1, 4, 5 };
-            var missing = new HashSet<int>();
-            var store = new HashSet<int>();
-            int count = 0;
-            for (int i = 0; i < a.Length; i++)
-            {
-                if (!store.Contains(i + 1) && i + 1 != a[i])
-                    missing.Add(i + 1);
-                if (i + 1 < a[i])
-                    store.Add(a[i]);
-                else
-                    missing.Remove(a[i]);
-                if (missing.Count() == 0)
-                    count++;
-            }
+            var items = new int[] { 1,2,3,4,5 };
+
+
+            var bubbleSort = new BubbleSort();
+            var count = bubbleSort.OptimizedSort(items);
+
+            Console.WriteLine(string.Join(",", items));
             Console.WriteLine(count);
+
+
+            //var missing = new HashSet<int>();
+            //var store = new HashSet<int>();
+            //int count = 0;
+            //int max = 0;
+
+            //for (int i = 0; i < a.Length; i++)
+            //{
+            //    max = Math.Max(max, a[i]);
+
+            //    if(max == i + 1)
+            //    {
+            //        count++;
+            //    }
+
+            //}
+
+            //for (int i = 0; i < a.Length; i++)
+            //{
+            //    if (!store.Contains(i + 1) && i + 1 != a[i])
+            //        missing.Add(i + 1);
+            //    if (i + 1 < a[i])
+            //        store.Add(a[i]);
+            //    else
+            //        missing.Remove(a[i]);
+            //    if (missing.Count() == 0)
+            //        count++;
+            //}
 
             //WorkPerform del1 = new WorkPerform(WorkPerform1);
             //WorkPerform del2 = new WorkPerform(WorkPerform2);
